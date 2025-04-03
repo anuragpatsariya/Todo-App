@@ -19,6 +19,12 @@ const TodoItem: React.FC<TodoItemProps> = ({ todo, toggleTodo, deleteTodo }) => 
             <span style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}>
                 {todo.title}
             </span>
+            <span style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}>
+                {todo.description}
+            </span>
+            <span style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}>
+                {todo.priority}
+            </span>
             <button className={styles.button} onClick={() => deleteTodo(todo.id)}>Delete</button>
         </div>
     );
