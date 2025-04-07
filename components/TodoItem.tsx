@@ -10,7 +10,7 @@ interface TodoItemProps {
 
 const TodoItem: React.FC<TodoItemProps> = ({ todo, toggleTodo, deleteTodo }) => {
     return (
-        <div className={styles.container}>
+        <div className={styles.container} style={{ whiteSpace: 'nowrap' }}>
             <input 
                 type="checkbox" 
                 checked={todo.completed} 
@@ -18,10 +18,10 @@ const TodoItem: React.FC<TodoItemProps> = ({ todo, toggleTodo, deleteTodo }) => 
             />
             <span style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}>
                 {todo.title}
-            </span>
+            </span><br></br>
             <span style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}>
                 {todo.description}
-            </span>
+            </span><br></br>
             <span style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}>
                 {todo.priority}
             </span>
